@@ -41,6 +41,34 @@ export const MainContentSection = (): JSX.Element => {
             <button className="order-card-button">Manage Waitlist</button>
           </div>
         </div>
+
+        {/* Action Cards under Orders */}
+        <div className="action-card">
+          <RefreshCwIcon className="action-card-icon" />
+          <div className="action-card-content">
+            <div className="action-card-title">Sell</div>
+            <div className="action-card-description">Sell tickets at your own price</div>
+          </div>
+          <ChevronRightIcon className="action-card-arrow" />
+        </div>
+
+        <div className="action-card">
+          <SendIcon className="action-card-icon" />
+          <div className="action-card-content">
+            <div className="action-card-title">Transfers</div>
+            <div className="action-card-description">Send tickets & items to anyone</div>
+          </div>
+          <ChevronRightIcon className="action-card-arrow" />
+        </div>
+
+        <div className="action-card">
+          <UploadIcon className="action-card-icon" />
+          <div className="action-card-content">
+            <div className="action-card-title">Upgrade</div>
+            <div className="action-card-description">Available upgrade offers</div>
+          </div>
+          <ChevronRightIcon className="action-card-arrow" />
+        </div>
       </section>
 
       {/* Items Section */}
@@ -89,36 +117,9 @@ export const MainContentSection = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Actions Section */}
+      {/* Resale Section */}
       <section className="section">
-        <div className="action-card">
-          <RefreshCwIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Sell</div>
-            <div className="action-card-description">Sell tickets at your own price</div>
-          </div>
-          <ChevronRightIcon className="action-card-arrow" />
-        </div>
-
-        <div className="action-card">
-          <SendIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Transfers</div>
-            <div className="action-card-description">Send tickets & items to anyone</div>
-          </div>
-          <ChevronRightIcon className="action-card-arrow" />
-        </div>
-
-        <div className="action-card">
-          <UploadIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Upgrade</div>
-            <div className="action-card-description">Available upgrade offers</div>
-          </div>
-          <ChevronRightIcon className="action-card-arrow" />
-        </div>
-
-        <h2 className="section-title resale-title">Resale</h2>
+        <h2 className="section-title">Resale</h2>
         <div className="action-card">
           <StoreIcon className="action-card-icon" />
           <div className="action-card-content">
