@@ -13,16 +13,17 @@ const IPhoneMock: React.FC<IPhoneMockProps> = ({ children }) => {
       <div className="side-button volume-up" />
       <div className="side-button volume-down" />
       
+      {/* Dynamic Island */}
+      <div className="dynamic-island" />
+      
       {/* Screen Content */}
       <div className="iphone-mock-screen">
         <StatusBar />
-        <div className="mock-content">
+        <main className="mock-content">
           {children}
-        </div>
+        </main>
+        <div className="home-indicator" />
       </div>
-      
-      {/* Home Indicator */}
-      <div className="home-indicator" />
     </div>
   );
 };

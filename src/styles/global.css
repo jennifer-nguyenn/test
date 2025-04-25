@@ -32,22 +32,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base styles */
-html {
+html, body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
 
 body {
-  min-height: 100vh;
   background: #f5f5f5;
-  color: var(--color-text);
   font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 /* Desktop wrapper */
@@ -84,12 +90,6 @@ body {
   border-radius: 36px;
   overflow: hidden;
   position: relative;
-}
-
-#root {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 /* Typography */

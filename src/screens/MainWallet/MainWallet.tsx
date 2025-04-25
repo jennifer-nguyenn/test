@@ -10,9 +10,12 @@ export const MainWallet = () => {
       <div className="wallet-container">
         <div className="wallet-background">
           <div className="wallet-background-image" />
+          <div className="wallet-background-overlay" />
         </div>
-        <WalletEventHeaderSection />
-        <MainContentSection />
+        <div className="wallet-content">
+          <WalletEventHeaderSection />
+          <MainContentSection />
+        </div>
       </div>
     </IPhoneMock>
   );
