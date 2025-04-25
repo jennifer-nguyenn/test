@@ -83,31 +83,6 @@ export const MainContentSection = (): JSX.Element => {
     },
   ];
 
-  // Add-ons data
-  const addOns = [
-    {
-      title: "1 Extra Night",
-      price: "$550.00",
-      details: "($500.00 + 50.00 fees & taxes)",
-      oldPrice: "",
-      image: "https://picsum.photos/400/300?random=4",
-    },
-    {
-      title: "Add Child",
-      price: "$ 165.00",
-      details: "($500.00 + 60.00 fees & taxes)",
-      oldPrice: "$600.00",
-      image: "https://picsum.photos/400/300?random=5",
-    },
-    {
-      title: "Yacht Day (8 people)",
-      price: "$ 3,450",
-      details: "($500.00 + 60.00 fees & taxes)",
-      oldPrice: "$600.00",
-      image: "https://picsum.photos/400/300?random=6",
-    },
-  ];
-
   // Rewards data
   const rewards = [
     {
@@ -317,83 +292,6 @@ export const MainContentSection = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </Card>
-
-      {/* Add-ons Section */}
-      <Card className="w-full bg-[#ffffff0d] overflow-hidden pb-4">
-        <CardHeader className="p-6">
-          <div className="flex items-start gap-2 w-full">
-            <div className="flex flex-col items-start justify-center gap-4 flex-1">
-              <div className="self-stretch [text-shadow:0px_2px_14px_#00000080] font-mobile-paragraph-bold text-white">
-                Add-ons
-              </div>
-              <div className="text-[#ffffffb2] font-medium leading-[18.2px]">
-                Description goes here more than 2 lines has <br />a read more
-                that opens a bottom drawer...
-                <br />
-                <span className="font-mobile-paragraph-small-bold text-white underline">
-                  Read More
-                </span>
-              </div>
-            </div>
-            <div className="inline-flex h-6 items-center justify-end gap-2">
-              <div className="font-mobile-paragraph-bold text-white whitespace-nowrap">
-                View All
-              </div>
-              <ChevronRightIcon className="w-6 h-6 text-white" />
-            </div>
-          </div>
-        </CardHeader>
-        <CardContent className="p-0">
-          <ScrollArea className="w-full">
-            <div className="flex items-start gap-2 px-4">
-              {addOns.map((addon, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col w-[218px] items-start gap-4 flex-shrink-0"
-                >
-                  <div
-                    className="relative w-[218px] h-[146px] rounded-2xl overflow-hidden bg-cover bg-center"
-                    style={{ backgroundImage: `url(${addon.image})` }}
-                  >
-                    <div className="inline-flex flex-col items-center justify-center p-2 absolute top-[90px] left-[162px]">
-                      <div className="flex w-10 h-10 items-center justify-center gap-2.5 bg-[#0899ff] rounded-[100px]">
-                        <div className="inline-flex items-center justify-center p-4 self-stretch ml-[-4.00px] mr-[-4.00px]">
-                          <div className="relative w-4 h-4 mt-[-4.00px] mb-[-4.00px]">
-                            <PlusIcon className="absolute w-4 h-4 top-0 left-0 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-start gap-1 w-full">
-                    <div className="self-stretch font-mobile-paragraph-bold text-white">
-                      {addon.title}
-                    </div>
-                    <div className="flex-col items-start gap-1 flex w-full">
-                      <div className="items-center gap-2 flex w-full">
-                        {addon.oldPrice && (
-                          <div className="font-medium text-[#ffffffb2] text-base line-through whitespace-nowrap">
-                            {addon.oldPrice}
-                          </div>
-                        )}
-                        <div className="font-mobile-paragraph text-white whitespace-nowrap">
-                          {addon.price}
-                        </div>
-                      </div>
-                      <div className="flex max-w-[311px] items-start gap-6 w-full">
-                        <div className="flex-1 font-mobile-paragraph-tiny text-[#ffffffb2]">
-                          {addon.details}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
-        </CardContent>
       </Card>
 
       {/* Rewards Section */}
