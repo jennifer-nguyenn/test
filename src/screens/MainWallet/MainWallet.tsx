@@ -2,6 +2,7 @@ import React from 'react';
 import './MainWallet.css';
 import { WalletEventHeaderSection } from './sections/WalletEventHeaderSection/WalletEventHeaderSection';
 import { MainContentSection } from './sections/MainContentSection/MainContentSection';
+import { TopNavBar } from './components/TopNavBar';
 import IPhoneMock from '../../components/IPhoneMock';
 
 export const MainWallet = () => {
@@ -13,6 +14,7 @@ export const MainWallet = () => {
           <div className="wallet-background-overlay" />
         </div>
         <div className="wallet-content">
+          <TopNavBar />
           <WalletEventHeaderSection />
           <MainContentSection />
         </div>
