@@ -8,13 +8,15 @@ export const MainContentSection = (): JSX.Element => {
       {/* Orders Section */}
       <section className="section orders-section">
         <h2 className="section-title">Your Orders</h2>
-        <div className="order-card">
-          <div className="order-card-content">
-            <div className="order-card-info">
-              <div className="order-card-title">Order ID: PKF94KFY</div>
-              <div className="order-card-subtitle">Aug 14, 2025</div>
+        <div className="scroll-area">
+          <div className="order-card">
+            <div className="order-card-content">
+              <div className="order-card-info">
+                <div className="order-card-title">Order ID: PKF94KFY</div>
+                <div className="order-card-subtitle">Aug 14, 2025</div>
+              </div>
+              <button className="order-card-button">Manage Order</button>
             </div>
-            <button className="order-card-button">Manage Order</button>
           </div>
         </div>
 
@@ -82,46 +84,25 @@ export const MainContentSection = (): JSX.Element => {
       </section>
 
       {/* Items Section */}
-      <section className="section">
-        <div className="section-header">
-          <h2 className="section-title">Your Items</h2>
-          <div className="section-counter">
-            <span>11</span>
-            <ChevronRightIcon className="icon" />
-          </div>
-        </div>
+      <section className="section items-section">
+        <h2 className="section-title">Your Items</h2>
         <div className="scroll-area">
-          <div className="scroll-content">
-            <div className="item-card">
-              <div className="item-card-image">
-                <img src="/stadium-1.jpg" alt="Stadium view" className="image" />
-              </div>
-              <div className="item-card-content">
-                <div className="item-card-title">Super long name g...</div>
-                <div className="item-card-subtitle">John Smith</div>
-                <div className="item-card-subtitle">Sec 129, Row 3, Seat 1</div>
-              </div>
+          <div className="item-card">
+            <div className="item-card-image">
+              <img src="/placeholders/placeholder.svg" alt="Item" />
             </div>
-            <div className="item-card">
-              <div className="item-card-image">
-                <img src="/stadium-2.jpg" alt="Stadium view" className="image" />
-              </div>
-              <div className="item-card-content">
-                <div className="item-card-title">Sec 29, Row 9, Seat 8</div>
-                <div className="item-card-subtitle">John Smith</div>
-                <div className="item-card-subtitle">Sec 29, Row 9, Seat 7</div>
-              </div>
+            <div className="item-card-content">
+              <div className="item-card-title">Sample Item</div>
+              <div className="item-card-subtitle">Details</div>
             </div>
-            {/* Add more item cards for scrolling */}
-            <div className="item-card">
-              <div className="item-card-image">
-                <img src="/stadium-1.jpg" alt="Stadium view" className="image" />
-              </div>
-              <div className="item-card-content">
-                <div className="item-card-title">Another Ticket</div>
-                <div className="item-card-subtitle">John Smith</div>
-                <div className="item-card-subtitle">Sec 130, Row 4, Seat 2</div>
-              </div>
+          </div>
+          <div className="item-card">
+            <div className="item-card-image">
+              <img src="/placeholders/placeholder.svg" alt="Item" />
+            </div>
+            <div className="item-card-content">
+              <div className="item-card-title">Sample Item 2</div>
+              <div className="item-card-subtitle">Details</div>
             </div>
           </div>
         </div>

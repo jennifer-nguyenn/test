@@ -1,8 +1,9 @@
 /* Main Content */
 .main-content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-  padding-bottom: 24px;
+  padding: 16px;
   background: #111;
 }
 
@@ -42,16 +43,19 @@
 
 /* Scroll Areas */
 .scroll-area {
-  margin: 0 -16px;
+  display: flex;
+  gap: 16px;
   overflow-x: auto;
+  padding: 4px 0;
+  margin: 0 -16px;
+  padding: 0 16px;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-left: var(--spacing-4);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 .scroll-area::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .scroll-content {
