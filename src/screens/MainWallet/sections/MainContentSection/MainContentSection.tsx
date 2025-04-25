@@ -106,11 +106,11 @@ export const MainContentSection = (): JSX.Element => {
   ];
 
   return (
-    <div className="flex flex-col items-start gap-4 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div className="flex flex-col items-start gap-4 w-full max-w-[375px] mx-auto px-4">
       {/* Your Orders Section */}
       <Card className="w-full bg-[#ffffff0d] overflow-hidden">
         <CardHeader className="pt-6 pb-0">
-          <div className="flex items-center justify-center gap-2 px-4 md:px-6 py-0 w-full backdrop-blur-[20px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20px)_brightness(100%)]">
+          <div className="flex items-center justify-center gap-2 px-4 py-0 w-full backdrop-blur-[20px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20px)_brightness(100%)]">
             <h3 className="flex-1 [text-shadow:0px_0px_12px_#000000b2] font-mobile-paragraph-bold text-white">
               Your Orders
             </h3>
@@ -118,11 +118,11 @@ export const MainContentSection = (): JSX.Element => {
         </CardHeader>
         <CardContent className="p-4">
           <ScrollArea className="w-full">
-            <div className="flex items-stretch gap-2">
+            <div className="flex items-stretch gap-2 pb-4">
               {orders.map((order, index) => (
                 <Card
                   key={index}
-                  className="w-[280px] md:w-[311px] bg-white rounded-2xl flex-shrink-0"
+                  className="w-[280px] bg-white rounded-2xl flex-shrink-0"
                 >
                   <CardContent className="p-4 flex flex-col h-full">
                     <div className="flex flex-col justify-between flex-1 gap-4">
@@ -190,12 +190,12 @@ export const MainContentSection = (): JSX.Element => {
                 </Card>
               ))}
             </div>
-            <ScrollBar orientation="horizontal" />
+            <ScrollBar orientation="horizontal" className="h-2" />
           </ScrollArea>
         </CardContent>
 
         {/* Your Items Section */}
-        <div className="flex flex-col items-start gap-2 pt-6 pb-4 px-4 md:px-6 w-full">
+        <div className="flex flex-col items-start gap-2 pt-6 pb-4 px-4 w-full">
           <div className="flex items-center gap-2 w-full">
             <div className="flex flex-col items-start justify-center flex-1">
               <div className="self-stretch [text-shadow:0px_2px_14px_#00000080] font-mobile-paragraph-bold text-white">
@@ -213,13 +213,13 @@ export const MainContentSection = (): JSX.Element => {
 
         <div className="flex flex-col items-start gap-4 w-full">
           <ScrollArea className="w-full">
-            <div className="flex items-start gap-2 px-4">
+            <div className="flex items-start gap-2 px-4 pb-4">
               {items.map((item, index) => (
                 <Card
                   key={index}
-                  className="w-[140px] md:w-[167.5px] max-h-[223.33px] bg-white rounded-2xl flex-shrink-0 overflow-hidden"
+                  className="w-[140px] max-h-[223.33px] bg-white rounded-2xl flex-shrink-0 overflow-hidden"
                 >
-                  <div className="relative w-full h-[90px] md:h-[111.67px] bg-[#1111111a]">
+                  <div className="relative w-full h-[90px] bg-[#1111111a]">
                     <img
                       className="absolute w-full h-full top-0 left-0 object-cover"
                       alt={item.title}
@@ -245,7 +245,7 @@ export const MainContentSection = (): JSX.Element => {
                   </CardContent>
                 </Card>
               ))}
-              <Card className="w-[140px] md:w-[167.5px] px-6 py-4 flex items-center justify-between bg-white-5 rounded-2xl flex-shrink-0">
+              <Card className="w-[140px] px-6 py-4 flex items-center justify-between bg-white-5 rounded-2xl flex-shrink-0">
                 <div className="flex items-start gap-4 flex-1">
                   <div className="flex flex-col items-start gap-2 flex-1">
                     <div className="flex flex-col items-start pl-0 pr-2 py-0 w-full">
@@ -257,10 +257,10 @@ export const MainContentSection = (): JSX.Element => {
                 </div>
               </Card>
             </div>
-            <ScrollBar orientation="horizontal" />
+            <ScrollBar orientation="horizontal" className="h-2" />
           </ScrollArea>
 
-          <div className="flex flex-col items-start gap-2 w-full">
+          <div className="flex flex-col items-start gap-2 w-full px-4">
             {actionCards.map((card, index) => (
               <Card
                 key={index}
@@ -288,8 +288,8 @@ export const MainContentSection = (): JSX.Element => {
           </div>
 
           {/* Resale Section */}
-          <div className="flex flex-col items-start gap-4 w-full">
-            <div className="font-mobile-paragraph-bold text-white pl-4">
+          <div className="flex flex-col items-start gap-4 w-full px-4">
+            <div className="font-mobile-paragraph-bold text-white">
               Resale
             </div>
             <Card
@@ -341,13 +341,13 @@ export const MainContentSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="relative w-full h-[229px] overflow-hidden">
+          <div className="relative w-full overflow-hidden">
             <ScrollArea className="w-full">
-              <div className="flex items-center justify-center px-4">
+              <div className="flex items-center px-4 pb-4">
                 {rewards.map((reward, index) => (
                   <React.Fragment key={index}>
                     <Card
-                      className={`w-[311px] flex-shrink-0 ${reward.unlocked ? "bg-[#ffffff0d]" : "bg-transparent border border-[#ffffff1a]"} rounded-2xl overflow-hidden`}
+                      className={`w-[280px] flex-shrink-0 ${reward.unlocked ? "bg-[#ffffff0d]" : "bg-transparent border border-[#ffffff1a]"} rounded-2xl overflow-hidden`}
                     >
                       <CardContent className="p-6 flex flex-col items-start gap-4">
                         <div className="flex items-start justify-between w-full">
@@ -409,15 +409,8 @@ export const MainContentSection = (): JSX.Element => {
                   </React.Fragment>
                 ))}
               </div>
-              <ScrollBar orientation="horizontal" />
+              <ScrollBar orientation="horizontal" className="h-2" />
             </ScrollArea>
-            <div className="absolute w-14 h-2 top-[205px] left-36 rounded-lg overflow-hidden">
-              <div className="inline-flex items-start gap-2 relative left-2">
-                <div className="w-2 h-2 bg-white rounded" />
-                <div className="w-2 h-2 bg-white rounded opacity-30" />
-                <div className="w-2 h-2 bg-white rounded opacity-30" />
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col items-start gap-2 px-4 w-full">
