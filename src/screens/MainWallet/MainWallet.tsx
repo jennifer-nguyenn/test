@@ -3,15 +3,16 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { MainContentSection } from "./sections/MainContentSection/MainContentSection";
 import { WalletEventHeaderSection } from "./sections/WalletEventHeaderSection";
+import "./MainWallet.css";
 
 export const MainWallet = (): JSX.Element => {
   return (
-    <div className="relative w-full bg-[#111111] overflow-hidden">
+    <div className="wallet-container">
       <div className="w-full">
         {/* Background image with gradient overlay */}
-        <div className="w-full h-[375px] relative">
-          <div className="h-[375px] bg-[url(/event-card-image.png)] bg-cover bg-[50%_50%]">
-            <div className="w-full h-[375px] [background:linear-gradient(180deg,rgba(17,17,17,0.5)_0%,rgba(17,17,17,1)_100%)]" />
+        <div className="wallet-background">
+          <div className="wallet-background-image">
+            <div className="wallet-background-overlay" />
           </div>
         </div>
 

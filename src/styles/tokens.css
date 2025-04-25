@@ -1,0 +1,60 @@
+:root {
+  /* Colors */
+  --color-primary: #0899ff;
+  --color-background: #111111;
+  --color-white: #ffffff;
+  --color-white-5: rgba(255, 255, 255, 0.05);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-black: #000000;
+  --color-black-60: rgba(0, 0, 0, 0.6);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(to right bottom, rgba(143,6,209,1), rgba(204,24,166,1), rgba(252,20,112,1));
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 2.25rem;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  
+  /* Border Radius */
+  --radius-full: 9999px;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  
+  /* Shadows */
+  --shadow-text: 0px 2px 14px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Layout */
+  --max-width-mobile: 375px;
+  --card-width-order: 280px;
+  --card-width-item: 140px;
+  --card-height-item-image: 90px;
+  
+  /* Transitions */
+  --transition-base: 0.2s ease-in-out;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-index */
+  --z-index-base: 1;
+  --z-index-dropdown: 10;
+  --z-index-modal: 100;
+} 
