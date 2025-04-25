@@ -243,7 +243,9 @@ body {
   height: 100%;
   background: var(--color-background);
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
 .wallet-container {
@@ -254,4 +256,5 @@ body {
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
 } 
