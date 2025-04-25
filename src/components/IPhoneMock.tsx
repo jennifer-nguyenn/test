@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import StatusBar from './StatusBar';
 
 interface IPhoneMockProps {
   children: ReactNode;
@@ -18,7 +17,6 @@ const IPhoneMock: React.FC<IPhoneMockProps> = ({ children }) => {
       
       {/* Screen Content */}
       <div className="iphone-mock-screen">
-        <StatusBar />
         <main className="mock-content">
           {children}
         </main>

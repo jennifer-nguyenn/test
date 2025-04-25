@@ -51,24 +51,6 @@ body {
   position: relative;
 }
 
-/* Status Bar */
-.status-bar {
-  display: none;
-}
-
-/* Dynamic Island */
-.dynamic-island {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 126px;
-  height: 37px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 3;
-}
-
 /* Content Area */
 .mock-content {
   flex: 1;
@@ -94,7 +76,6 @@ body {
 
 /* Home Indicator */
 .home-indicator {
-  grid-row: 3;
   width: 100%;
   height: 34px;
   display: grid;
@@ -139,38 +120,8 @@ body {
   height: 60px;
 }
 
-/* Home indicator */
-.iphone-mock::after {
-  display: none;
-}
-
 /* Notch */
-.iphone-mock::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 126px;
-  height: 37.33px;
-  background: var(--color-black);
-  border-radius: 20px;
-  z-index: var(--z-index-dynamic-island);
-}
-
-.iphone-mock-notch {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 126px;
-  height: 37px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 60;
-}
-
-.iphone-mock-island {
+.dynamic-island {
   position: absolute;
   top: 11px;
   left: 50%;
@@ -179,61 +130,10 @@ body {
   height: 37px;
   background: #000;
   border-radius: 20px;
-  z-index: 70;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 3;
 }
 
-.iphone-mock-island::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.iphone-mock-buttons {
-  position: absolute;
-  left: -14px;
-  top: 180px;
-  width: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.iphone-mock-button {
-  width: 4px;
-  height: 60px;
-  background: #1A1A1A;
-  border-radius: 2px;
-}
-
-.iphone-mock-power {
-  position: absolute;
-  right: -14px;
-  top: 180px;
-  width: 4px;
-  height: 100px;
-  background: #1A1A1A;
-  border-radius: 2px;
-}
-
-.mobile-container {
-  width: 100%;
-  height: 100%;
-  background: var(--color-background);
-  position: relative;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
-}
-
+/* Wallet Container */
 .wallet-container {
   min-height: 100%;
   width: 100%;
