@@ -6,66 +6,76 @@ export const MainContentSection = (): JSX.Element => {
   return (
     <div className="main-content">
       {/* Orders Section */}
-      <section className="section">
+      <section className="section orders-section">
         <h2 className="section-title">Your Orders</h2>
         <div className="order-card">
           <div className="order-card-content">
-            <div className="order-card-title">Order ID: PKF94KFY</div>
-            <div className="order-card-subtitle">Aug 14, 2025</div>
-          </div>
-          <div className="order-card-footer">
+            <div className="order-card-info">
+              <div className="order-card-title">Order ID: PKF94KFY</div>
+              <div className="order-card-subtitle">Aug 14, 2025</div>
+            </div>
             <button className="order-card-button">Manage Order</button>
           </div>
         </div>
 
         <div className="order-card">
           <div className="order-card-content">
-            <div className="order-card-label">Payment Plan</div>
-            <div className="order-card-title">Order ID: PKF49KFY</div>
-            <div className="order-card-subtitle">Aug 18, 2025</div>
-          </div>
-          <div className="order-card-footer">
-            <button className="order-card-button">Manage Order</button>
-            <button className="order-card-button">Manage Payment Plan</button>
+            <div className="order-card-info">
+              <div className="order-card-label">Payment Plan</div>
+              <div className="order-card-title">Order ID: PKF49KFY</div>
+              <div className="order-card-subtitle">Aug 18, 2025</div>
+            </div>
+            <div className="order-card-actions">
+              <button className="order-card-button">Manage Order</button>
+              <button className="order-card-button">Manage Payment Plan</button>
+            </div>
           </div>
         </div>
 
         <div className="order-card">
           <div className="order-card-content">
-            <div className="order-card-label">Waitlist</div>
-            <div className="order-card-title">Order ID: PKF54KFZ</div>
-            <div className="order-card-subtitle">Aug 20, 2025</div>
-          </div>
-          <div className="order-card-footer">
-            <button className="order-card-button">Manage Order</button>
-            <button className="order-card-button">Manage Waitlist</button>
+            <div className="order-card-info">
+              <div className="order-card-label">Waitlist</div>
+              <div className="order-card-title">Order ID: PKF54KFZ</div>
+              <div className="order-card-subtitle">Aug 20, 2025</div>
+            </div>
+            <div className="order-card-actions">
+              <button className="order-card-button">Manage Order</button>
+              <button className="order-card-button">Manage Waitlist</button>
+            </div>
           </div>
         </div>
 
         {/* Action Cards under Orders */}
         <div className="action-card">
-          <RefreshCwIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Sell</div>
-            <div className="action-card-description">Sell tickets at your own price</div>
+          <div className="action-card-left">
+            <RefreshCwIcon className="action-card-icon" />
+            <div className="action-card-content">
+              <div className="action-card-title">Sell</div>
+              <div className="action-card-description">Sell tickets at your own price</div>
+            </div>
           </div>
           <ChevronRightIcon className="action-card-arrow" />
         </div>
 
         <div className="action-card">
-          <SendIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Transfers</div>
-            <div className="action-card-description">Send tickets & items to anyone</div>
+          <div className="action-card-left">
+            <SendIcon className="action-card-icon" />
+            <div className="action-card-content">
+              <div className="action-card-title">Transfers</div>
+              <div className="action-card-description">Send tickets & items to anyone</div>
+            </div>
           </div>
           <ChevronRightIcon className="action-card-arrow" />
         </div>
 
         <div className="action-card">
-          <UploadIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Upgrade</div>
-            <div className="action-card-description">Available upgrade offers</div>
+          <div className="action-card-left">
+            <UploadIcon className="action-card-icon" />
+            <div className="action-card-content">
+              <div className="action-card-title">Upgrade</div>
+              <div className="action-card-description">Available upgrade offers</div>
+            </div>
           </div>
           <ChevronRightIcon className="action-card-arrow" />
         </div>
@@ -118,13 +128,15 @@ export const MainContentSection = (): JSX.Element => {
       </section>
 
       {/* Resale Section */}
-      <section className="section">
+      <section className="section resale-section">
         <h2 className="section-title">Resale</h2>
         <div className="action-card">
-          <StoreIcon className="action-card-icon" />
-          <div className="action-card-content">
-            <div className="action-card-title">Your listings</div>
-            <div className="action-card-description">Manage your listings</div>
+          <div className="action-card-left">
+            <StoreIcon className="action-card-icon" />
+            <div className="action-card-content">
+              <div className="action-card-title">Your listings</div>
+              <div className="action-card-description">Manage your listings</div>
+            </div>
           </div>
           <ChevronRightIcon className="action-card-arrow" />
         </div>
