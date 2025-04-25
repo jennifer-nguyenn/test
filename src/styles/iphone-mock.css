@@ -79,7 +79,6 @@ body {
   position: relative;
   z-index: 1;
   overscroll-behavior-y: contain;
-  padding-top: 47px;
 }
 
 /* Hide Scrollbar but keep functionality */
@@ -244,4 +243,10 @@ body {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overscroll-behavior-y: contain;
+}
+
+.wallet-content {
+  position: relative;
+  min-height: 100%;
+  padding-top: 47px; /* Add padding for status bar */
 } 
