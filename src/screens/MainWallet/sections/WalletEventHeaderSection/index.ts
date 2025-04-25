@@ -1,0 +1,1 @@
+export { WalletEventHeaderSection } from "./WalletEventHeaderSection";
