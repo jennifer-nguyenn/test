@@ -1,18 +1,31 @@
 @import './tokens.css';
 
-/* Reset and base styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styles */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-white);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Typography classes */
