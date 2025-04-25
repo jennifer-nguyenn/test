@@ -148,5 +148,5 @@ body {
 .wallet-content {
   position: relative;
   min-height: 100%;
-  padding-top: 47px; /* Add padding for status bar */
+  padding-top: 95px; /* Increased padding to account for both status bar and navigation */
 } 
