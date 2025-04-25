@@ -19,6 +19,8 @@
   background: var(--color-background);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Dynamic Island */
@@ -171,13 +173,13 @@
 
 /* Mock Content */
 .mock-content {
-  height: 100%;
-  padding-top: 44px; /* Account for status bar */
-  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background: var(--color-background);
   position: relative;
   z-index: 1;
+  height: 100%;
+  padding-top: 44px; /* Account for status bar */
 }
 
 /* Custom Scrollbar */
