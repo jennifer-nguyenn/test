@@ -1,56 +1,63 @@
-/* Reset */
-body {
+/* Base styles */
+html, body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
   background: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: hidden; /* Prevent page scrolling */
 }
 
-/* iPhone Mock */
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* iPhone frame */
 .iphone-mock {
-  position: fixed;
   width: 375px;
   height: 812px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #000000;
+  background: #000;
   border-radius: 44px;
   border: 12px solid #1a1a1a;
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1),
               0 20px 40px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
 }
 
-/* Screen */
+/* Screen container */
 .iphone-mock-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-background);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #111;
 }
 
-/* Status Bar */
+/* Status bar */
 .status-bar {
+  height: 47px;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 47px;
-  z-index: 10;
+  z-index: 20;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Dynamic Island */
+/* Dynamic island */
 .dynamic-island {
   position: absolute;
   top: 11px;
@@ -60,54 +67,48 @@ body {
   height: 37px;
   background: #000;
   border-radius: 20px;
-  z-index: 11;
+  z-index: 30;
 }
 
-/* Content Area */
+/* Scrollable content area */
 .mock-content {
   position: absolute;
   top: 47px; /* Status bar height */
   left: 0;
   right: 0;
   bottom: 34px; /* Home indicator height */
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background: var(--color-background);
+  z-index: 10;
 }
 
-/* Hide Scrollbar */
+/* Hide scrollbars */
 .mock-content::-webkit-scrollbar {
   display: none;
 }
 
-.mock-content {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Home Indicator */
+/* Home indicator */
 .home-indicator {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
   height: 34px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 
 .home-indicator::after {
   content: '';
   width: 134px;
   height: 5px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 100px;
-  opacity: 0.3;
 }
 
-/* Side Buttons */
+/* Side buttons */
 .side-button {
   position: absolute;
   background: #2a2a2a;
