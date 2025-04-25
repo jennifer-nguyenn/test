@@ -12,12 +12,36 @@ export const MainContentSection = (): JSX.Element => {
           <div className="scroll-content">
             <div className="order-card">
               <div className="order-card-content">
-                <h3 className="order-card-title">Order #1234</h3>
-                <p className="order-card-subtitle">2 tickets • $150 each</p>
+                <div className="order-card-title">Order ID: PKF94KFY</div>
+                <div className="order-card-subtitle">Aug 14, 2025</div>
               </div>
               <div className="order-card-footer">
-                <span className="text-sm">View Details</span>
-                <ChevronRightIcon size={20} />
+                <button className="order-card-button">Manage Order</button>
+                <div className="order-card-count">3</div>
+              </div>
+            </div>
+
+            <div className="order-card">
+              <div className="order-card-content">
+                <div className="order-card-label">Payment Plan</div>
+                <div className="order-card-title">Order ID: PKF49KFY</div>
+                <div className="order-card-subtitle">Aug 18, 2025</div>
+              </div>
+              <div className="order-card-footer">
+                <button className="order-card-button">Manage Order</button>
+                <button className="order-card-button">Manage Payment Plan</button>
+              </div>
+            </div>
+
+            <div className="order-card">
+              <div className="order-card-content">
+                <div className="order-card-label">Waitlist</div>
+                <div className="order-card-title">Order ID: PKF54KFZ</div>
+                <div className="order-card-subtitle">Aug 20, 2025</div>
+              </div>
+              <div className="order-card-footer">
+                <button className="order-card-button">Manage Order</button>
+                <button className="order-card-button">Manage Waitlist</button>
               </div>
             </div>
           </div>
@@ -40,8 +64,9 @@ export const MainContentSection = (): JSX.Element => {
                 <img src="/images/stadium-1.jpg" alt="Stadium view" className="image" />
               </div>
               <div className="item-card-content">
-                <h3 className="item-card-title">VIP Pass</h3>
-                <p className="item-card-subtitle">Section A, Row 1</p>
+                <div className="item-card-title">Super long name g...</div>
+                <div className="item-card-subtitle">John Smith</div>
+                <div className="item-card-subtitle">Sec 129, Row 3, Seat 1</div>
               </div>
             </div>
             <div className="item-card">
@@ -49,9 +74,9 @@ export const MainContentSection = (): JSX.Element => {
                 <img src="/images/stadium-2.jpg" alt="Stadium view" className="image" />
               </div>
               <div className="item-card-content">
-                <h3 className="item-card-title">Sec 29, Row 9, Seat 8</h3>
-                <p className="item-card-subtitle">John Smith</p>
-                <p className="item-card-subtitle">Sec 29 Row 9, Seat 7</p>
+                <div className="item-card-title">Sec 29, Row 9, Seat 8</div>
+                <div className="item-card-subtitle">John Smith</div>
+                <div className="item-card-subtitle">Sec 29, Row 9, Seat 7</div>
               </div>
             </div>
           </div>
@@ -63,46 +88,46 @@ export const MainContentSection = (): JSX.Element => {
         <div className="action-card">
           <RefreshCwIcon className="action-card-icon" />
           <div className="action-card-content">
-            <h3 className="action-card-title">Sell</h3>
-            <p className="action-card-description">Sell tickets at your own price</p>
+            <div className="action-card-title">Sell</div>
+            <div className="action-card-description">Sell tickets at your own price</div>
           </div>
-          <ChevronRightIcon size={20} />
+          <ChevronRightIcon className="action-card-arrow" />
         </div>
 
         <div className="action-card">
           <SendIcon className="action-card-icon" />
           <div className="action-card-content">
-            <h3 className="action-card-title">Transfers</h3>
-            <p className="action-card-description">Send tickets & items to anyone</p>
+            <div className="action-card-title">Transfers</div>
+            <div className="action-card-description">Send tickets & items to anyone</div>
           </div>
-          <ChevronRightIcon size={20} />
+          <ChevronRightIcon className="action-card-arrow" />
         </div>
 
         <div className="action-card">
           <UploadIcon className="action-card-icon" />
           <div className="action-card-content">
-            <h3 className="action-card-title">Upgrade</h3>
-            <p className="action-card-description">Available upgrade offers</p>
+            <div className="action-card-title">Upgrade</div>
+            <div className="action-card-description">Available upgrade offers</div>
           </div>
-          <ChevronRightIcon size={20} />
+          <ChevronRightIcon className="action-card-arrow" />
         </div>
 
         <h2 className="section-title resale-title">Resale</h2>
         <div className="action-card">
           <StoreIcon className="action-card-icon" />
           <div className="action-card-content">
-            <h3 className="action-card-title">Your listings</h3>
-            <p className="action-card-description">Manage your listings</p>
+            <div className="action-card-title">Your listings</div>
+            <div className="action-card-description">Manage your listings</div>
           </div>
-          <ChevronRightIcon size={20} />
+          <ChevronRightIcon className="action-card-arrow" />
         </div>
       </section>
 
       {/* Rewards Section */}
       <section className="rewards-section">
         <div className="rewards-header">
-          <h2 className="rewards-title">Rewards</h2>
-          <p className="rewards-subtitle">Earn points with every purchase</p>
+          <h2 className="rewards-title">10 points</h2>
+          <p className="rewards-subtitle">8 sales</p>
         </div>
 
         <div className="rewards-card unlocked">
