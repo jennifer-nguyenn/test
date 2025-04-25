@@ -1,0 +1,296 @@
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Section Styles */
+.section {
+  padding: 0 var(--spacing-4);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.section-counter {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+}
+
+.section-counter .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+}
+
+.resale-title {
+  margin-top: var(--spacing-6);
+}
+
+/* Images */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scroll Areas */
+.scroll-area {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content {
+  display: flex;
+  gap: var(--spacing-2);
+  padding-bottom: var(--spacing-4);
+}
+
+/* Order Cards */
+.order-card {
+  min-width: var(--card-width-order);
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4);
+}
+
+.order-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.order-card-title {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.order-card-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-4);
+}
+
+/* Item Cards */
+.item-card {
+  min-width: var(--card-width-item);
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.item-card-image {
+  height: 90px;
+  background: var(--color-background-secondary);
+}
+
+.item-card-content {
+  padding: var(--spacing-4);
+}
+
+.item-card-title {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-1);
+}
+
+.item-card-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Action Cards */
+.action-card {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-4);
+  background: var(--color-card-background);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-2);
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.action-card:hover {
+  background: var(--color-card-background-hover);
+}
+
+.action-card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+  margin-right: var(--spacing-4);
+}
+
+.action-card-content {
+  flex: 1;
+}
+
+.action-card-title {
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-1);
+}
+
+.action-card-description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Rewards Section */
+.rewards-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.rewards-star {
+  color: var(--color-primary);
+}
+
+.rewards-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-1);
+}
+
+.rewards-points {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.rewards-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 100%;
+  background: var(--gradient-primary);
+}
+
+.progress-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Share Button */
+.share-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.share-icon {
+  color: var(--color-white);
+}
+
+/* Rewards Section */
+.rewards-section {
+  padding: var(--spacing-6) var(--spacing-4);
+  background: var(--color-background-secondary);
+}
+
+.rewards-header {
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.rewards-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+.rewards-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.rewards-card {
+  background: var(--color-card-background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4);
+}
+
+.rewards-badge {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-full);
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.rewards-badge.unlocked {
+  background: var(--color-success);
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+  background: var(--color-background-secondary);
+}
+
+.nav-tab {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  background: var(--color-card-background);
+  border-radius: var(--border-radius-lg);
+  text-align: left;
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.nav-tab:hover {
+  background: var(--color-card-background-hover);
+}
+
+.nav-tab.primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.nav-tab.primary:hover {
+  background: var(--color-primary-hover);
+} 
