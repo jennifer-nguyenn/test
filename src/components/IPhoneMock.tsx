@@ -8,9 +8,6 @@ interface IPhoneMockProps {
 const IPhoneMock: React.FC<IPhoneMockProps> = ({ children }) => {
   return (
     <div className="iphone-mock">
-      {/* Dynamic Island */}
-      <div className="dynamic-island" />
-      
       {/* Side Buttons */}
       <div className="side-button power" />
       <div className="side-button volume-up" />

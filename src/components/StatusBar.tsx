@@ -6,6 +6,8 @@ const StatusBar: React.FC = () => {
       <div className="status-bar-left">
         <span className="status-bar-time">9:41</span>
       </div>
+
+      <div className="status-bar-center" />
       
       <div className="status-bar-right">
         {/* Cellular Signal */}
