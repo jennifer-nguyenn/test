@@ -1,7 +1,6 @@
 /* Main Content */
 .main-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 24px;
   padding-bottom: 24px;
   background: #111;
