@@ -3,6 +3,15 @@
   height: 100%;
   background-color: var(--color-background);
   position: relative;
+  overflow: hidden;
+}
+
+.wallet-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 91px; /* 47px status bar + 44px nav bar */
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
