@@ -61,6 +61,7 @@ body {
   position: relative;
   z-index: 1;
   overscroll-behavior-y: contain;
+  contain: paint;
 }
 
 /* Hide Scrollbar but keep functionality */
@@ -143,6 +144,7 @@ body {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overscroll-behavior-y: contain;
+  contain: paint;
 }
 
 .wallet-content {
