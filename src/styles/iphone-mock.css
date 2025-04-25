@@ -1,28 +1,60 @@
+/* Page Container */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden; /* Prevent page scrolling */
+}
+
 /* iPhone 13 Mini Mock Container */
 .iphone-mock {
-  position: relative;
+  position: fixed;
   width: 375px;
   height: 812px;
-  margin: 2rem auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #000000;
   border-radius: 44px;
   border: 12px solid #1a1a1a;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1),
               0 20px 40px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Screen Container */
 .iphone-mock-screen {
   position: relative;
-  width: 100%;
-  height: 100%;
+  flex: 1;
   background: var(--color-background);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+  position: relative;
+  height: 47px;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Dynamic Island */
@@ -36,6 +68,46 @@
   background-color: #000;
   border-radius: 20px;
   z-index: 999;
+}
+
+/* Mock Content Area */
+.mock-content {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: var(--color-background);
+}
+
+/* Hide Scrollbars */
+.mock-content::-webkit-scrollbar {
+  display: none;
+}
+
+.mock-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Home Indicator */
+.home-indicator {
+  position: relative;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 1000;
+}
+
+.home-indicator::after {
+  content: '';
+  width: 134px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 100px;
+  opacity: 0.3;
 }
 
 /* Side Buttons */
@@ -64,100 +136,6 @@
   top: 190px;
   width: 3px;
   height: 60px;
-}
-
-/* Status Bar */
-.status-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 47px;
-  padding: 12px 16px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  z-index: 1000;
-  background: transparent;
-}
-
-.status-bar-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.status-bar-time {
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.status-bar-center {
-  position: relative;
-  width: 126px;
-  height: 37px;
-  background: #000;
-  border-radius: 20px;
-  margin: 0 auto;
-  transform: translateY(-6px);
-}
-
-.status-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-/* Mock Content */
-.mock-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-top: 47px; /* Height of status bar */
-  height: 100%;
-  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none;  /* Hide scrollbar for Firefox */
-}
-
-/* Custom Scrollbar */
-.mock-content::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
-/* Home Indicator */
-.home-indicator {
-  position: fixed;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 134px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 3px;
-  opacity: 0.3;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-/* Background wrapper */
-body {
-  min-height: 100vh;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: hidden;
 }
 
 /* Home indicator */
