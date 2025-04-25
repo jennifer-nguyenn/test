@@ -72,11 +72,6 @@ export const MainContentSection = (): JSX.Element => {
       icon: "https://api.iconify.design/heroicons:arrow-path.svg?color=white",
     },
     {
-      title: "Refund",
-      description: "Get your tickets refunded",
-      icon: "https://api.iconify.design/heroicons:arrow-uturn-left.svg?color=white",
-    },
-    {
       title: "Upgrade",
       description: "Available upgrade offers",
       icon: "https://api.iconify.design/heroicons:lock-closed.svg?color=white",
@@ -290,6 +285,35 @@ export const MainContentSection = (): JSX.Element => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Resale Section */}
+          <div className="flex flex-col items-start gap-4 w-full">
+            <div className="font-mobile-paragraph-bold text-white pl-4">
+              Resale
+            </div>
+            <Card
+              className="p-4 w-full bg-[#ffffff0d] rounded-2xl flex items-center justify-between"
+            >
+              <div className="flex items-center gap-4 flex-1">
+                <img
+                  className="w-6 h-6"
+                  alt="Store icon"
+                  src="https://api.iconify.design/heroicons:building-storefront.svg?color=white"
+                />
+                <div className="flex flex-col items-start gap-2 flex-1">
+                  <div className="flex flex-col items-start pl-0 pr-2 py-0 w-full">
+                    <div className="self-stretch font-mobile-paragraph-bold text-white">
+                      Your listings
+                    </div>
+                    <div className="self-stretch font-mobile-paragraph-small text-[#ffffffb2]">
+                      Manage your listings
+                    </div>
+                  </div>
+                </div>
+                <ChevronRightIcon className="w-6 h-6 text-white" />
+              </div>
+            </Card>
           </div>
         </div>
       </Card>
