@@ -1,16 +1,21 @@
 .wallet-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: var(--color-background);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   position: relative;
-  overflow: hidden;
+  border-radius: 0;
 }
 
 .wallet-content {
   width: 100%;
   height: 100%;
   position: relative;
-  padding-top: 91px; /* 47px status bar + 44px nav bar */
+  padding-top: env(safe-area-inset-top, 50px);
+  padding-bottom: env(safe-area-inset-bottom, 34px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -183,4 +188,76 @@
 .rewards-card.locked {
   background-color: transparent;
   border: 1px solid var(--color-white-20);
+}
+
+/* Adjust scrollbar for iPhone mock */
+.wallet-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Safe area padding for iPhone mock */
+.wallet-content {
+  padding-top: env(safe-area-inset-top, 50px);
+  padding-bottom: env(safe-area-inset-bottom, 34px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Ensure content doesn't overlap with Dynamic Island */
+.wallet-header {
+  padding-top: 60px;
+}
+
+.iphone-mock {
+  width: 375px;
+  height: 812px;
+  background: var(--color-white);
+  border-radius: 44px;
+  border: 12px solid var(--color-black);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  margin: var(--spacing-8) auto;
+}
+
+.status-bar {
+  height: 44px;
+  width: 100%;
+  background: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.mock-content {
+  height: calc(100% - 44px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wallet-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.wallet-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.wallet-background-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark));
 } 

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Wallet Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111111" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet App</title>
   </head>
   <body>
-    <div class="desktop-wrapper">
-      <div class="mobile-mock">
-        <div class="mobile-container">
-          <div id="app"></div>
+    <div id="root">
+      <div class="iphone-mock">
+        <div class="status-bar">
+          <span>9:41</span>
+          <div>
+            <span>5G</span>
+            <span>100%</span>
+          </div>
+        </div>
+        <div class="mock-content">
+          <!-- React app will be mounted here -->
         </div>
       </div>
     </div>
-    <script type="module" src="./src/index.tsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
