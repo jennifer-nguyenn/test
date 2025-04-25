@@ -7,7 +7,7 @@ import "./MainWallet.css";
 export const MainWallet = (): JSX.Element => {
   return (
     <div className="wallet-container">
-      <div className="w-full">
+      <div className="wallet-content">
         {/* Background image with gradient overlay */}
         <div className="wallet-background">
           <div className="wallet-background-image">
