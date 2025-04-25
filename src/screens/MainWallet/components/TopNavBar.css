@@ -25,12 +25,14 @@
 .status-time {
   min-width: 54px;
   text-align: center;
+  z-index: 101;
 }
 
 .status-icons {
   display: flex;
   gap: 6px;
   align-items: center;
+  z-index: 101;
 }
 
 .status-icon {
@@ -46,7 +48,7 @@
   height: 37px;
   background: #000;
   border-radius: 20px;
-  z-index: 3;
+  z-index: 102;
 }
 
 .nav-main {
