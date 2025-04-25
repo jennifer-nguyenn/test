@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Base styles */
@@ -12,20 +14,208 @@ html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-}
-
-body {
   background-color: var(--color-background);
   color: var(--color-white);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Typography */
+h1, .h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-4);
+}
+
+h2, .h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+
+h3, .h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-2);
+}
+
+/* Section styles */
+.section {
+  padding: var(--spacing-4);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-white);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--color-white-5);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--color-white-10);
+  color: var(--color-white);
+}
+
+.button:hover {
+  background-color: var(--color-white-20);
+}
+
+/* List styles */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-4);
+  background-color: var(--color-white-5);
+  border-radius: var(--radius-lg);
+}
+
+/* Action card styles */
+.action-card {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-4);
+  background-color: var(--color-white-5);
+  border-radius: var(--radius-2xl);
+  margin-bottom: var(--spacing-2);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.action-card:hover {
+  background-color: var(--color-white-10);
+}
+
+.action-card-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--spacing-4);
+  color: var(--color-white);
+}
+
+.action-card-content {
+  flex: 1;
+}
+
+.action-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-1);
+}
+
+.action-card-description {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Rewards section styles */
+.rewards-section {
+  padding: var(--spacing-4);
+}
+
+.rewards-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+}
+
+.rewards-points {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rewards-card {
+  padding: var(--spacing-4);
+  background-color: var(--color-white-5);
+  border-radius: var(--radius-2xl);
+  margin-bottom: var(--spacing-2);
+}
+
+.rewards-card.unlocked {
+  background-color: var(--color-white-10);
+}
+
+.rewards-progress {
+  margin-top: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Navigation tabs */
+.nav-tabs {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid var(--color-white-10);
+  background-color: var(--color-background);
+}
+
+.nav-tab {
+  flex: 1;
+  padding: var(--spacing-3) var(--spacing-2);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-tab.active {
+  color: var(--color-primary);
+  border-top: 2px solid var(--color-primary);
 }
 
 /* Typography classes */
@@ -82,27 +272,6 @@ body {
 
 .card:hover {
   transform: translateY(-2px);
-}
-
-/* Button styles */
-.button {
-  padding: var(--spacing-2) var(--spacing-4);
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-bold);
-  transition: all var(--transition-base);
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-.button-primary {
-  background: var(--gradient-primary);
-  color: var(--color-white);
-}
-
-.button-secondary {
-  background-color: var(--color-white-10);
-  color: var(--color-white);
 }
 
 /* Badge styles */
