@@ -74,19 +74,110 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
+  z-index: 1000;
+}
+
+.status-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-bar-time {
   font-weight: 600;
-  z-index: 100;
+}
+
+.status-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-bar-signal {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  height: 12px;
+}
+
+.signal-bar {
+  width: 3px;
+  background-color: currentColor;
+  border-radius: 1px;
+}
+
+.signal-bar:nth-child(1) { height: 5px; }
+.signal-bar:nth-child(2) { height: 7px; }
+.signal-bar:nth-child(3) { height: 9px; }
+.signal-bar:nth-child(4) { height: 11px; }
+
+.status-bar-wifi {
+  position: relative;
+  width: 15px;
+  height: 12px;
+}
+
+.wifi-arc {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+}
+
+.wifi-arc:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  bottom: 3px;
+}
+
+.wifi-arc:nth-child(3) {
+  width: 6px;
+  height: 6px;
+  bottom: 6px;
+}
+
+.status-bar-battery {
+  width: 24px;
+  height: 12px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 1px;
+  position: relative;
+}
+
+.battery-level {
+  height: 100%;
+  width: 60%;
+  background-color: currentColor;
+  border-radius: 1px;
+}
+
+.battery-cap {
+  position: absolute;
+  right: -3px;
+  top: 4px;
+  width: 2px;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 0 2px 2px 0;
 }
 
 /* Mock Content */
 .mock-content {
-  height: calc(100% - 44px);
-  margin-top: 44px;
-  overflow-y: auto;
+  height: 100%;
+  padding-top: 44px; /* Account for status bar */
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: var(--color-background);
+  position: relative;
+  z-index: 1;
 }
 
 /* Custom Scrollbar */
