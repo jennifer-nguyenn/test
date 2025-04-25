@@ -89,7 +89,7 @@ export const MainContentSection = (): JSX.Element => {
         <div className="scroll-area">
           <div className="item-card">
             <div className="item-card-image">
-              <img src="/placeholders/placeholder.svg" alt="Item" />
+              <img src="/images/stadium-1.svg" alt="Stadium view" />
             </div>
             <div className="item-card-content">
               <div className="item-card-title">Sample Item</div>
@@ -98,7 +98,7 @@ export const MainContentSection = (): JSX.Element => {
           </div>
           <div className="item-card">
             <div className="item-card-image">
-              <img src="/placeholders/placeholder.svg" alt="Item" />
+              <img src="/images/stadium-2.svg" alt="Stadium view" />
             </div>
             <div className="item-card-content">
               <div className="item-card-title">Sample Item 2</div>
