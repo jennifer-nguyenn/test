@@ -7,8 +7,11 @@ import './styles/iphone-mock.css';
 import { StrictMode } from "react";
 import { MainWallet } from "./screens/MainWallet/MainWallet";
 
-createRoot(document.getElementById("app") as HTMLElement).render(
+const rootElement = document.getElementById("root");
+if (!rootElement) throw new Error("Failed to find the root element");
+
+createRoot(rootElement).render(
   <StrictMode>
     <MainWallet />
-  </StrictMode>,
+  </StrictMode>
 );
