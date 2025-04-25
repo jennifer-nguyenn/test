@@ -1,12 +1,12 @@
-/* iPhone Mock Container */
+/* iPhone 13 Mini Mock Container */
 .iphone-mock {
   position: relative;
   width: 375px;
   height: 812px;
   margin: 2rem auto;
-  background: var(--color-background);
-  border-radius: 40px;
-  border: 12px solid var(--color-black);
+  background: #000000;
+  border-radius: 44px;
+  border: 12px solid #1a1a1a;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1),
               0 20px 40px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -16,7 +16,7 @@
 .iphone-mock-screen {
   width: 100%;
   height: 100%;
-  background: #000;
+  background: var(--color-background);
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
 /* Dynamic Island */
 .dynamic-island {
   position: absolute;
-  top: 12px;
+  top: 11px;
   left: 50%;
   transform: translateX(-50%);
   width: 126px;
@@ -34,10 +34,10 @@
   z-index: 1000;
 }
 
-/* Side Button */
+/* Side Buttons */
 .side-button {
   position: absolute;
-  background-color: #1a1a1a;
+  background-color: #2a2a2a;
   border-radius: 2px;
 }
 
@@ -62,6 +62,39 @@
   height: 60px;
 }
 
+/* Status Bar */
+.status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 100;
+}
+
+/* Mock Content */
+.mock-content {
+  height: calc(100% - 44px);
+  margin-top: 44px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--color-background);
+}
+
+/* Custom Scrollbar */
+.mock-content::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 /* Home Indicator */
 .home-indicator {
   position: absolute;
@@ -74,6 +107,44 @@
   border-radius: 3px;
   opacity: 0.3;
   z-index: 1000;
+}
+
+/* Background wrapper */
+body {
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'GreyCliff', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Home indicator */
+.iphone-mock::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  z-index: 100;
+}
+
+/* Notch */
+.iphone-mock::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37.33px;
+  background: var(--color-black);
+  border-radius: 20px;
+  z-index: var(--z-index-dynamic-island);
 }
 
 .iphone-mock-notch {
@@ -148,94 +219,4 @@
   background: var(--color-background);
   position: relative;
   overflow: hidden;
-}
-
-/* Notch */
-.iphone-mock::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 126px;
-  height: 37.33px;
-  background: var(--color-black);
-  border-radius: 20px;
-  z-index: var(--z-index-dynamic-island);
-}
-
-/* Home indicator */
-.iphone-mock::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 134px;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.35);
-  border-radius: 100px;
-  z-index: 100;
-}
-
-/* Status bar */
-.status-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 44px;
-  background: var(--color-background);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 var(--spacing-4);
-  font-size: var(--font-size-sm);
-  color: var(--color-white);
-  z-index: var(--z-index-status-bar);
-}
-
-.status-bar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  height: 30px;
-  background: var(--color-black);
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-}
-
-.status-bar::after {
-  content: "";
-  width: 67px;
-  height: 11.5px;
-  background-image: url("data:image/svg+xml,%3Csvg width='67' height='12' viewBox='0 0 67 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42.5 1.5H64.5C65.3284 1.5 66 2.17157 66 3V9C66 9.82843 65.3284 10.5 64.5 10.5H42.5C41.6716 10.5 41 9.82843 41 9V3C41 2.17157 41.6716 1.5 42.5 1.5ZM42.5 2.5C42.2239 2.5 42 2.72386 42 3V9C42 9.27614 42.2239 9.5 42.5 9.5H64.5C64.7761 9.5 65 9.27614 65 9V3C65 2.72386 64.7761 2.5 64.5 2.5H42.5Z' fill='white'/%3E%3Cpath d='M63.5 4V8H43.5V4H63.5Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.5 0H35.5C36.3284 0 37 0.671573 37 1.5V10.5C37 11.3284 36.3284 12 35.5 12H22.5C21.6716 12 21 11.3284 21 10.5V1.5C21 0.671573 21.6716 0 22.5 0ZM22.5 1C22.2239 1 22 1.22386 22 1.5V10.5C22 10.7761 22.2239 11 22.5 11H35.5C35.7761 11 36 10.7761 36 10.5V1.5C36 1.22386 35.7761 1 35.5 1H22.5Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.5 3.5H15.5C16.3284 3.5 17 4.17157 17 5V9C17 9.82843 16.3284 10.5 15.5 10.5H3.5C2.67157 10.5 2 9.82843 2 9V5C2 4.17157 2.67157 3.5 3.5 3.5ZM3.5 4.5C3.22386 4.5 3 4.72386 3 5V9C3 9.27614 3.22386 9.5 3.5 9.5H15.5C15.7761 9.5 16 9.27614 16 9V5C16 4.72386 15.7761 4.5 15.5 4.5H3.5Z' fill='white'/%3E%3Cpath d='M14.5 5.5V8.5H4.5V5.5H14.5Z' fill='white'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-/* Main content container */
-.mock-content {
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-top: 44px;
-}
-
-/* Custom scrollbar for mock content */
-.mock-content::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
-/* Background wrapper */
-body {
-  min-height: 100vh;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 } 
