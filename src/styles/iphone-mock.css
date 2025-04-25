@@ -32,11 +32,12 @@ body {
 /* Screen Container */
 .iphone-mock-screen {
   position: relative;
-  flex: 1;
-  background: var(--color-background);
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background: var(--color-background);
+  overflow: hidden;
 }
 
 /* Status Bar */
@@ -70,17 +71,19 @@ body {
   z-index: 999;
 }
 
-/* Mock Content Area */
+/* Mock Content */
 .mock-content {
   position: relative;
   flex: 1;
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   background: var(--color-background);
 }
 
-/* Hide Scrollbars */
+/* Hide scrollbars */
 .mock-content::-webkit-scrollbar {
   display: none;
 }
