@@ -8,7 +8,8 @@ export default defineConfig({
   base: "/test/",
   build: {
     outDir: "dist",
-    assetsDir: "assets"
+    assetsDir: "assets",
+    sourcemap: true
   },
   css: {
     postcss: {
