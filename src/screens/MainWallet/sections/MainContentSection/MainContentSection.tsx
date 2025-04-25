@@ -8,42 +8,37 @@ export const MainContentSection = (): JSX.Element => {
       {/* Orders Section */}
       <section className="section">
         <h2 className="section-title">Your Orders</h2>
-        <div className="scroll-area">
-          <div className="scroll-content">
-            <div className="order-card">
-              <div className="order-card-content">
-                <div className="order-card-title">Order ID: PKF94KFY</div>
-                <div className="order-card-subtitle">Aug 14, 2025</div>
-              </div>
-              <div className="order-card-footer">
-                <button className="order-card-button">Manage Order</button>
-                <div className="order-card-count">3</div>
-              </div>
-            </div>
+        <div className="order-card">
+          <div className="order-card-content">
+            <div className="order-card-title">Order ID: PKF94KFY</div>
+            <div className="order-card-subtitle">Aug 14, 2025</div>
+          </div>
+          <div className="order-card-footer">
+            <button className="order-card-button">Manage Order</button>
+          </div>
+        </div>
 
-            <div className="order-card">
-              <div className="order-card-content">
-                <div className="order-card-label">Payment Plan</div>
-                <div className="order-card-title">Order ID: PKF49KFY</div>
-                <div className="order-card-subtitle">Aug 18, 2025</div>
-              </div>
-              <div className="order-card-footer">
-                <button className="order-card-button">Manage Order</button>
-                <button className="order-card-button">Manage Payment Plan</button>
-              </div>
-            </div>
+        <div className="order-card">
+          <div className="order-card-content">
+            <div className="order-card-label">Payment Plan</div>
+            <div className="order-card-title">Order ID: PKF49KFY</div>
+            <div className="order-card-subtitle">Aug 18, 2025</div>
+          </div>
+          <div className="order-card-footer">
+            <button className="order-card-button">Manage Order</button>
+            <button className="order-card-button">Manage Payment Plan</button>
+          </div>
+        </div>
 
-            <div className="order-card">
-              <div className="order-card-content">
-                <div className="order-card-label">Waitlist</div>
-                <div className="order-card-title">Order ID: PKF54KFZ</div>
-                <div className="order-card-subtitle">Aug 20, 2025</div>
-              </div>
-              <div className="order-card-footer">
-                <button className="order-card-button">Manage Order</button>
-                <button className="order-card-button">Manage Waitlist</button>
-              </div>
-            </div>
+        <div className="order-card">
+          <div className="order-card-content">
+            <div className="order-card-label">Waitlist</div>
+            <div className="order-card-title">Order ID: PKF54KFZ</div>
+            <div className="order-card-subtitle">Aug 20, 2025</div>
+          </div>
+          <div className="order-card-footer">
+            <button className="order-card-button">Manage Order</button>
+            <button className="order-card-button">Manage Waitlist</button>
           </div>
         </div>
       </section>
@@ -61,7 +56,7 @@ export const MainContentSection = (): JSX.Element => {
           <div className="scroll-content">
             <div className="item-card">
               <div className="item-card-image">
-                <img src="/images/stadium-1.jpg" alt="Stadium view" className="image" />
+                <img src="/stadium-1.jpg" alt="Stadium view" className="image" />
               </div>
               <div className="item-card-content">
                 <div className="item-card-title">Super long name g...</div>
@@ -71,12 +66,23 @@ export const MainContentSection = (): JSX.Element => {
             </div>
             <div className="item-card">
               <div className="item-card-image">
-                <img src="/images/stadium-2.jpg" alt="Stadium view" className="image" />
+                <img src="/stadium-2.jpg" alt="Stadium view" className="image" />
               </div>
               <div className="item-card-content">
                 <div className="item-card-title">Sec 29, Row 9, Seat 8</div>
                 <div className="item-card-subtitle">John Smith</div>
                 <div className="item-card-subtitle">Sec 29, Row 9, Seat 7</div>
+              </div>
+            </div>
+            {/* Add more item cards for scrolling */}
+            <div className="item-card">
+              <div className="item-card-image">
+                <img src="/stadium-1.jpg" alt="Stadium view" className="image" />
+              </div>
+              <div className="item-card-content">
+                <div className="item-card-title">Another Ticket</div>
+                <div className="item-card-subtitle">John Smith</div>
+                <div className="item-card-subtitle">Sec 130, Row 4, Seat 2</div>
               </div>
             </div>
           </div>
